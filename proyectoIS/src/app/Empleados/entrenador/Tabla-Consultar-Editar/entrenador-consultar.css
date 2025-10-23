@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(206, 206, 206);
+    height: auto;
+}
+
+#title {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cuadroFormulario {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    width: 35%;
+    height: 89%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 35px;
+}
+
+#items {
+    list-style: none;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+#items li {
+    margin-bottom: 10px;
+}
+
+#boton {
+    position: relative;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    align-items: center;
+    list-style: none;
+    height: 40px;
+    width: calc(100% - 35px);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #e74c3c;
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#boton:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.cabin-fuente {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+  
+html, body {
+    height: 100%;
+    font-family: "Cabin", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-form {
+    display: flex;
+    font-family:"Cabin", sans-serif;
+    overflow: hidden;
+    width: 200%;
+    flex-direction: row;
+    height: 200%;
+}
+  
+.sidebar {
+    position: relative;
+    bottom: 11px;
+    right: 30px;
+    width: 200px;
+    height: 800px;
+    background: linear-gradient(145deg, #22ac50, #000000);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+  
+.sidebar.collapsed {
+    width: 70px;
+}
+    
+.logo-section {
+    padding: 20px;
+    text-align: center;
+}
+  
+.logo {
+    width: 61px;
+    height: 84px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+  
+.navigation {
+    margin-top: 30px;
+}
+  
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+  
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+  
+.nav-item.active {
+    background: rgba(255,255,255,0.2);
+    border-left: 4px solid #ffffff;
+}
+  
+.nav-item i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+  
+.nav-text {
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: left;
+}
+    
+.nav-item:hover .tooltip {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        z-index: 1000;
+    }
+    
+    .formbold-main-wrapper {
+        margin-left: 70px;
+    }
+    
+    .sidebar:not(.collapsed) {
+        transform: translateX(0);
+    }
+    
+    .sidebar.collapsed {
+        transform: translateX(-100%);
+    }
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 30px;
+}
+
+@font-face {
+    font-family:cabin;
+    src: url("/front-proyecto/public/Cabin-VariableFont_wdth,wght.ttf");
+}
+
+.sidebar-form{
+    font-family: cabin;
+}
+
+.cabin-fuente {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+#togglePassword{
+    color: #22ac50;
+    cursor: pointer;
+}
+
+#togglePassword:hover{
+    color: #1a7f2a;
+}

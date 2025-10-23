@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="implemento-tabla.css"> <!-- Enlazamos el CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <title>Tabla Implementos</title>
+</head>
+<body>
+    <div class="sidebar-form">
+        <div class="sidebar">
+      
+            <div class="sidebar-content">
+              <div class="logo-section">
+                <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+                <h3 class="title">Unión Atlético Paraíso</h3>
+              </div>
+              <nav class="navigation">
+                <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+            </nav>
+            </div>
+          </div>
+
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                <h2>Implementos Registrados</h2> <!-- Título para la tabla -->
+
+                <table id="tablaImplementos">
+                    <thead>
+                        <tr>
+                            <th colspan="6">Implementos</th>
+                        </tr>
+                        <tr class="fil">
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>   
+                            <th>Acciones</th>                 
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button id="btnAgregarImplemento" class="crear-implemento" onclick="window.location.href='../Formulario/implemento-formulario.html'">
+                    Agregar Implemento
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="implemento-tabla.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Modificar_Jugador.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+  <title>Modificar Jugador</title>
+</head>
+<body>
+    <div class="sidebar-form">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+                    <h3 class="title">Unión Atlético Paraíso</h3>
+                </div>
+                <nav class="navigation">
+                    <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                    <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                    <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                <form method="POST">
+                    <h2>Modificar Jugador</h2> <!-- Título del formulario -->
+                    <div class="form-columns">
+                        <div class="form-column1">
+                            <div class="form-group">
+                                <label for="nombre" aria-label="Full Name">Nombre y Apellido</label>
+                                <input type="text" id="nombre" aria-required="true" placeholder="Pedro Lopez">
+                                <div id="nombreError" style="display:none; color:red;">El nombre no puede estar vacío.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cedula" class="formbold-form-label">Cédula</label>
+                                <input type="number" name="cedula" id="cedula" placeholder="01234569" class="formbold-form-input" readonly />
+                                <div id="cedulaError" style="display:none; color:red;">La cédula debe ser un número entre 20,000,000 y 35,000,000.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sexo" class="formbold-form-label">Sexo</label>
+                                <select id="sexo" name="sexo" disabled >
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="edad" class="formbold-form-label">Edad</label>
+                                <input type="number" name="edad" id="edad" placeholder="20" class="formbold-form-input" />
+                                <div id="edadError" style="display:none; color:red;">La edad debe estar entre 5 y 25 años.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nacionalidad" class="formbold-form-label">Nacionalidad</label>
+                                <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Argentina" class="formbold-form-input" />
+                                <div id="nacionalidadError" style="display:none; color:red;">La nacionalidad no puede estar vacía.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="posicion" class="formbold-form-label">Posición</label>
+                                <select id="posicion" name="posicion" required>
+                                    <option value="Delantero">Delantero</option>
+                                    <option value="Medio">Medio</option>
+                                    <option value="Defensa">Defensa</option>
+                                    <option value="Portero">Portero</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-column2">
+                            <div class="form-group">
+                                <label for="dorsal" class="formbold-form-label">Dorsal</label>
+                                <input type="number" name="dorsal" id="dorsal" placeholder="10" class="formbold-form-input" />
+                                <div id="dorsalError" style="display:none; color:red;">El dorsal debe estar entre 1 y 99.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="peso" class="formbold-form-label">Peso</label>
+                                <input type="number" name="peso" id="peso" placeholder="0.0" class="formbold-form-input" step="0.01" required />
+                                <div id="pesoError" style="display:none; color:red;">El peso debe estar entre 18 y 99 kg.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="altura" class="formbold-form-label">Altura</label>
+                                <input type="number" name="altura" id="altura" placeholder="0.0" class="formbold-form-input" step="0.01" required />
+                                <div id="alturaError" style="display:none; color:red;">La altura debe estar entre 1.00 y 1.75 m.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tarjetaRoja" class="formbold-form-label">Tarjeta Roja</label>
+                                <input type="number" name="tarjetaRoja" id="tarjetaRoja" placeholder="1" class="formbold-form-input" />
+                                <div id="tarjetaRojaError" style="display:none; color:red;">Las tarjetas rojas deben estar entre 0 y 99.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tarjetaAmarilla" class="formbold-form-label">Tarjeta Amarilla</label>
+                                <input type="number" name="tarjetaAmarilla" id="tarjetaAmarilla" placeholder="1" class="formbold-form-input" />
+                                <div id="tarjetaAmarillaError" style="display:none; color:red;">Las tarjetas amarillas deben estar entre 0 y 99.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="titulos" class="formbold-form-label">Títulos</label>
+                                <input type="number" name="titulos" id="titulos" placeholder="1" class="formbold-form-input" />
+                                <div id="titulosError" style="display:none; color:red;">Los títulos deben estar entre 0 y 99.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="btnGuardarCambios" class="formbold-btn">
+                        Guardar Cambios
+                    </button>
+                </form>
+                <button onclick="window.location.href='../Tabla Jugador/Tabla_Jugador.html'" class="formbold-btn volver-btn">
+                    Volver
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Modificar_Jugador.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+td:first-child {
+  padding: 0 15px 0 20px;
+}
+  
+.cabin-fuente {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+  
+html, body {
+  height: 100%;
+  font-family:"Cabin", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+  
+.sidebar-form {
+  display: flex;  
+  overflow: hidden;
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+}
+  
+.sidebar {
+  width: 200px;
+  background: linear-gradient(145deg, #22ac50, #000000);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+  
+.sidebar.collapsed {
+  width: 70px;
+}
+  
+.logo-section {
+  padding: 20px;
+  text-align: center;
+}
+  
+.logo {
+  width: 61px;
+  height: 84px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+  
+.navigation {
+  margin-top: 30px;
+}
+  
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+  
+.nav-item:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(5px);
+}
+  
+.nav-item.active {
+  background: rgba(255,255,255,0.2);
+  border-left: 4px solid #ffffff;
+}
+  
+.nav-item i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+  
+.nav-text {
+  font-size: 16px;
+  white-space: nowrap;
+  text-align: left;
+}
+  
+.nav-item:hover .tooltip {
+  opacity: 1;
+}
+  
+.formbold-main-wrapper{
+  flex: 1;
+  padding: 20px;
+  background: #f5f6fa;
+  overflow-y: auto;
+  width: 100%;
+}
+  
+.formbold-form-wrapper{
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+  
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+ 
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #22ac50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+  
+button:hover {
+  background-color: #22ac50;
+  transform: translateY(-2px);
+}
+  
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+} 
+  
+@media (max-width: 768px) {
+  .formbold-main-wrapper  {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .sidebar{
+    width: 150px;
+  }
+
+  .nav-item{
+    padding: 10px;
+  }
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  button{
+    font-size: 14px;
+  }
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+  border-collapse: collapse; /* Para que no haya espacio entre celdas */
+  border-radius: 15px;
+  overflow: hidden;
+}
+  
+th, td {
+  border: 1px solid #e0e0e0; /* Borde de las celdas */
+  padding: 12px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto */
+}
+  
+th {
+  background-color: #22ac50; /* Color de fondo para el encabezado */
+  color: white; /* Color del texto en el encabezado */
+  font-weight: bold; /* Negrita para el texto del encabezado */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo alternativo para filas pares */
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el mouse sobre una fila */
+}
+
+/* Estilos para el icono de acción */
+.material-icons {
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+  color: #22ac50; /* Color del icono */
+  transition: color 0.3s; /* Transición suave para el color */
+}
+
+.material-icons:hover {
+  color: #1a7f2a; /* Color del icono al pasar el mouse */
+}
+
+/* Estilos para el checkbox */
+td input[type="checkbox"] {
+  transform: scale(1.5); /* Hacer el checkbox más grande */
+  display: block;
+  margin: 0 auto; /* Centrar el checkbox */
+}
+
+.volver-btn {
+  margin-top: 20px; /* Margen superior para separar del botón de registrar */
+  background-color: #e74c3c; /* Color de fondo rojo */
+  color: white; /* Color del texto en el botón */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 14px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: 600; /* Peso de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: all 0.3s ease; /* Transición suave para efectos */
+  width: 100%; /* Ancho completo del botón */
+}
+
+/* Efecto al pasar el mouse sobre el botón de volver */
+.volver-btn:hover {
+  background-color: #c0392b; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Desplazamiento hacia arriba al pasar el mouse */
+}
+
+/* Estilo para el overlay de los mensajes que cubre toda la pantalla */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Estilo para el cuadro de mensaje de registro exitoso */
+.message-box {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.message-box h2 {
+  margin-bottom: 20px;
+}
+
+.message-box button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-box button:hover {
+  background: #45a049;
+}
+
+/* Estilo para el cuadro de mensaje de error */
+.message-boxError{
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  max-width: 80%; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  box-sizing: border-box; /* Incluye el padding en el ancho y el borde en el tamaño total*/
+}
+
+.message-boxError h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.message-boxError button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-boxError button:hover {
+  background: #45a049;
+}
+
+.message-boxError ul{
+  list-style-type: none; /*Quita los ptos de la lista*/
+  padding: 0; /*Quita el padding de la lista*/
+}
+
+.message-boxError li{
+  margin-bottom: 10px; /*Agrega un espacio entre cada item*/
+}
+
+.message-boxError .campo-errado{
+  color: darkred; /*Color rojo oscuro*/
+  font-weight: bold; /*Texto en negrita*/
+}

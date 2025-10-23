@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <title>Registro de implementos</title>
+    <link rel="stylesheet" href="implemento-formulario.css">
+</head>
+<body>
+  <div class="sidebar-form">
+    <div class="sidebar">
+        
+      <div class="sidebar-content">
+        <div class="logo-section">
+          <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+          <h3 class="title">Unión Atlético Paraíso</h3>
+        </div>
+        <nav class="navigation">
+          <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="formbold-main-wrapper">
+      <div class="formbold-form-wrapper">
+        <form>
+          <div class="formbold-input-flex">
+            <h2 class="titulo">Registra los implementos</h2>  
+            <div class="form-columns">
+
+              <div class="form-group">
+                <label for="nombre" class="formbold-form-label"> Nombre del implemento </label>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  class="formbold-form-input"
+                  placeholder="brazuca"
+                >
+                <div id="nombreError" style="display:none; color:red;">El nombre del implemento no puede estar vacío.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="tipo" class="formbold-form-label">Tipo del implemento</label>
+                <input
+                  type="text"
+                  name="tipo"
+                  id="tipo"
+                  class="formbold-form-input"
+                  placeholder="balon"
+                >
+                <div id="tipoError" style="display:none; color:red;">El tipo del implemento no puede estar vacío.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="material" class="formbold-form-label"> Material del implemento </label>
+                <input
+                  type="text"
+                  name="material"
+                  id="material"
+                  class="formbold-form-input"
+                  placeholder="sintetico"
+                >
+                <div id="materialError" style="display:none; color:red;">El material del implemento no puede estar vacío.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="marca" class="formbold-form-label">Marca del implemento</label>
+                <input
+                  type="text"
+                  name="marca"
+                  id="marca"
+                  class="formbold-form-input"
+                  placeholder="adidas"
+                >
+                <div id="marcaError" style="display:none; color:red;">El marca del implemento no puede estar vacío.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="cantidad" class="formbold-form-label">Cantidad a registrar</label>
+                <input
+                  type="number"
+                  name="cantidad"
+                  id="cantidad"
+                  class="formbold-form-input"
+                  placeholder="12"
+                >
+                <div id="cantidadError" style="display:none; color:red;">La cantidad debe de ser entre 0 y 40.</div>
+              </div>
+
+            </div>
+          </div>
+          <button type="button" id="boton" name="boton" type="submit" class="formbold-btn">OK</button>
+          <button type="button" id="btnVolver" name="btnVolver" onclick="volver()">Volver</button>
+        </form>
+        <script src="implemento-formulario.js"></script>     
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

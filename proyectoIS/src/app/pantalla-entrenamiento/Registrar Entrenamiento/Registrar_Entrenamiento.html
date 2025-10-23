@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Registrar_Entrenamiento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <title>Agregar Entrenamiento</title>
+</head>
+
+<body>
+
+  <div class="sidebar-form">
+    <div class="sidebar">
+      
+      <div class="sidebar-content">
+        <div class="logo-section">
+          <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+          <h3 class="title">Unión Atlético Paraíso</h3>
+        </div>
+        <nav class="navigation">
+          <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+          <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+          <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+          <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+          <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+          <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+          <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+        </nav>
+      </div>
+    </div>
+
+
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          
+          <form id="entrenamientoForm">
+            <div class="formbold-input-flex">
+              <h1>Agregar Entrenamiento</h1> <!--- registro de entrenamiento metodo POST -->
+              <div class="form-columns">
+
+                <div class="form-group">
+                  <label for="nombre" class="formbold-form-label"> Nombre </label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    placeholder="Penales"
+                    class="formbold-form-input"
+                    />
+                    <div id="nombreEntrenamientoError" style="display:none; color:red;">El nombre del entrenamiento no puede estar vacío y debe de tener más de 3 caracteres.</div>
+                </div>
+            
+                <div class="form-group">
+                  <label for="descripcion">Descripción del Entrenamiento:</label>
+                  <textarea   
+                    id="descripcion" 
+                    name="descripcion" 
+                    rows="4" 
+                    cols="50" 
+                    placeholder="Ingresa una descripción del entrenamiento..."></textarea>
+                  <div id="descripcionEntrenamientoError" style="display:none; color:red;">La descripción del entrenamiento no puede estar vacío y debe de tener más de 3 caracteres.</div>
+                </div> 
+            
+                <div class="form-group">
+                  <label for="duracion" class="formbold-form-label"> Duración (minutos) </label>
+                  <input
+                    type="number"
+                    name="duracion"
+                    id="duracion"
+                    placeholder="15"
+                    class="formbold-form-input"
+                  />
+                  <span id="duracionError" class="error-message" style="color: red; display: none;">La duración del entrenamiento debe estar entre 5 y 30 min</span>
+                </div>
+              
+                <div class="form-group">
+                  <label for="dificultad" class="formbold-form-label"> Dificultad </label>
+                  <select id="dificultad" name="dificultad" required>
+                    <option value="Difícil">Difícil</option>
+                    <option value="Medio">Medio</option>
+                    <option value="Fácil">Fácil</option>
+                  </select>
+                </div>
+              
+                <div class="form-group">
+                  <label for="tipo" class="formbold-form-label"> Tipo </label>
+                  <input
+                    type="text"
+                    name="tipo"
+                    id="tipo"
+                    placeholder="Tecnico"
+                    class="formbold-form-input"
+                    />
+                    <div id="tipoEntrenamientoError" style="display:none; color:red;">El tipo de entrenamiento no puede estar vacío y debe de tener más de 3 caracteres.</div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="objetivo">Objetivo del entrenamiento:</label>
+                  <textarea   
+                      id="objetivo" 
+                      name="objetivo" 
+                      rows="4" 
+                      cols="50" 
+                      placeholder="Ingresa el objetivo del entrenamiento..."></textarea>
+                  <div id="objetivoEntrenamientoError" style="display:none; color:red;">El objetivo del entrenamiento no puede estar vacío y debe de tener más de 3 caracteres.</div>
+                </div> 
+              </div>
+              <button id="btnRegistrarEntrenamiento" class="formbold-btn">
+                    Registrar
+              </button>
+            </div>
+          </form>
+          <button onclick="window.location.href='../Tabla Entrenamiento/Tabla_Entrenamiento.html'" class="formbold-btn volver-btn">
+            Volver
+          </button>
+      
+        </div>
+        
+      </div>
+      
+  </div>
+  <script src="Registrar_Entrenamiento.js"></script>
+</body>
+</html>

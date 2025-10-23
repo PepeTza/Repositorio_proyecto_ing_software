@@ -1,0 +1,43 @@
+<html lang="en">
+    <link rel="stylesheet" href="login.component.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Login Proyecto</title>
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+      
+            <div class="sidebar-content">
+              <div class="logo-section">
+                <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+                <h3 class="title">Unión Atlético Paraíso</h3>
+              </div>
+            </div>
+        </div>  
+        <section id="cuadroLogin">
+            <div  id="tituloUAP">
+                <h1>U.A.P. Control System</h1>
+            </div>
+            <ul id="items">
+                <li id="tituloLogin">
+                    <h1>Login</h1>
+                </li>
+                <li id="usuarioLi">
+                    <input  id="campoUsuario" type="text" name="" class="input" placeholder="Usuario" required>
+                    <i class="fa-solid fa-user"></i>
+                </li>
+                <li id="passwordLi">
+                    <input  id="campoPassword" type="password" name="" class="input" placeholder="Contraseña" required>
+                    <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword" style="cursor: pointer;"></i>
+                </li>
+            </ul>
+            <button id="btnIniciarSecion" class="btn" onclick="iniciarSeccion()">Iniciar sesión</button>
+        </section>
+    </main>
+    <script src="login.component.js"></script>
+</body>
+</html>

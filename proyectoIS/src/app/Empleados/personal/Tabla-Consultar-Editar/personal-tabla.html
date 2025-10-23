@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="personal-tabla.css">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Enlace a los iconos de Material -->
+    <title>Tabla Personal</title>
+</head>
+<body>
+    <div class="sidebar-form">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <img src="/proyectoIS/public/logotemplateUAP10.png" 
+                        alt="Union Atletico Paraiso" class="logo"
+                    >
+                    <h3 class="title">Unión Atlético Paraíso</h3>
+                </div>
+                <nav class="navigation">
+                    <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                    <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                    <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                <h2>Empleados comunes Registrados</h2>
+                <table id="tablaPersonal">
+                    <thead>
+                        <tr>
+                            <th colspan="7">Empleados comunes</th>
+                        </tr>
+                        <tr>
+                            <th>id</th>
+                            <th>Nombre</th>
+                            <th>Cédula</th>
+                            <th>Sexo</th>
+                            <th>Edad</th>
+                            <th>Sueldo ($)</th>
+                            <th>Acciones</th>
+                        </tr>
+                        <tbody>
+                        </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <button class="btnVolver" onclick="volver()">Volver</button>
+    <button   onclick="window.location.href='../Formulario/personal-formulario.html'" class="btnRegistrar">Rgistrar nuevo empleado común</span>
+    <script src="personal-tabla.js"></script>
+</body>
+</html>

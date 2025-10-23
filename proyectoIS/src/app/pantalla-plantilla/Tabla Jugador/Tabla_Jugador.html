@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Enlace a los iconos de Material -->
+    <link rel="stylesheet" href="Tabla_Jugador.css"> <!-- Enlazamos el CSS -->
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <title>Tabla de Jugadores</title>
+</head>
+<body>
+    <div class="sidebar-form">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+                    <h3 class="title">Unión Atlético Paraíso</h3>
+                </div>
+                <nav class="navigation">
+                    <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                    <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                    <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                <h2>Jugadores Registrados</h2> <!-- Título para la tabla -->
+
+                <table id="tablaJugadores">
+                    <thead>
+                        <tr>
+                            <th colspan="6">Jugadores</th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Cédula</th>
+                            <th>Posición</th>
+                            <th>Edad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <!-- Botón para agregar jugador -->
+                <button id="btnAgregarJugador" onclick="window.location.href='../Registrar jugador/Registrar_Jugador.html'">Agregar Jugador</button>    
+            </div>
+        </div>
+    </div>
+    <script src="Tabla_jugador.js"></script>
+</body>
+</html>

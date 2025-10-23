@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="entrenador-formulario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <title>Formulario Entrenador</title>
+</head>
+<body>
+    <div class="sidebar-form">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+                    <h3 class="title">Unión Atlético Paraíso</h3>
+                </div>
+                <nav class="navigation">
+                    <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                    <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                    <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                <form method="POST">
+                    <h2>Registrar Entrenador</h2>
+                    <div class="form-columns">
+                        <div class="form-column1">
+                            
+                            <div class="form-group">
+                                <label for="nombre" aria-label="Full Name">Nombre y Apellido</label>
+                                <input type="text" id="nombre" formControlName="name" aria-required="true" placeholder="Pedro Lopez">
+                                <div id="nombreError" style="display:none; color:red;">El nombre no puede estar vacío.</div>
+                            </div>                          
+
+                            <div class="form-group">
+                                <label for="sexo" class="formbold-form-label">Sexo</label>
+                                <select id="sexo" name="sexo">
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nacionalidad" class="formbold-form-label">Nacionalidad</label>
+                                <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Argentina" class="formbold-form-input" />
+                                <div id="nacionalidadError" style="display:none; color:red;">La nacionalidad no puede estar vacía.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono" class="formbold-form-label">telefono</label>
+                                <select id="num" name="num">
+                                    <option value="0412">0412</option>
+                                    <option value="0414">0414</option>
+                                    <option value="0416">0416</option>
+                                    <option value="0424">0424</option>
+                                    <option value="0426">0426</option>
+                                </select>
+                                <input type="text" name="telefono" id="telefono" placeholder="5489652" min="7" max="7" class="formbold-form-input" />
+                                <div id="telefonoError" style="display:none; color:red;">El teléfono no puede estar vacío.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sueldo" class="formbold-form-label">Sueldo ($)</label>
+                                <input type="number" name="sueldo" id="sueldo" placeholder="55.25" class="formbold-form-input" step="0.01" min="3.60" max="3000.00" />
+                                <div id="sueldoError" style="display:none; color:red;">El sueldo debe estar entre 3.60 y 3000.00 $.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="experiencia" class="formbold-form-label">Experiencia</label>
+                                <input type="number" name="experiencia" id="experiencia" placeholder="15" class="formbold-form-input"  min="0" max="60" step="0"/>
+                                <div id="experienciaError" style="display:none; color:red;">La experiencia debe estar entre 0 y 60 años.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="partDirigido" class="formbold-form-label">Partidos dirigidos</label>
+                                <input type="number" name="partDirigido" id="partDirigido" placeholder="15" class="formbold-form-input"  min="0" max="200" step="0"/>
+                                <div id="partDirigidoError" style="display:none; color:red;">La cantidad de partidos dirigidos debe de estar entre 0 y 200.</div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-column2">
+
+                            <div class="form-group">
+                                <label for="cedula" class="formbold-form-label">Cédula</label>
+                                <input type="number" name="cedula" id="cedula" placeholder="01234569" class="formbold-form-input" />
+                                <div id="cedulaError" style="display:none; color:red;">La cédula debe ser un número entre 9,000,000 y 40,000,000.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="edad" class="formbold-form-label">Edad</label>
+                                <input type="number" name="edad" id="edad" placeholder="20" class="formbold-form-input" />
+                                <div id="edadError" style="display:none; color:red;">La edad debe estar entre 20 y 80 años.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="formbold-form-label">Email</label>
+                                <input type="email" name="email" id="email" placeholder="juanmartinez@gmail.com" class="formbold-form-input" />
+                                <div id="emailError" style="display:none; color:red;">El email no puede estar vacío.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rol" class="formbold-form-label">Rol</label>
+                                <input type="tex" name="rol" id="rol" value="Entrenador" readonly class="formbold-form-input" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="stLaboral" class="formbold-form-label">Estado Laboral</label>
+                                <input type="text" name="stLaboral" id="stLaboral" class="formbold-form-input" value="Activo" readonly />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="stContrato" class="formbold-form-label">Estatus del contrato</label>
+                                <input type="tex" name="stContrato" id="stContrato" value="Vigente" readonly class="formbold-form-input" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="equipoDirigido" class="formbold-form-label">Equipo dirigido</label>
+                                <input type="text" name="equipoDirigido" id="equipoDirigido" value="Ninguno" readonly class="formbold-form-input" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button id="btnEntrenador" class="formbold-btn"> Registrar</button>
+                </form>
+                <button onclick="window.location.href='../Tabla-Consultar-Editar/entrenador-tabla.html'" class="formbold-btn volver-btn">
+                    Volver
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="entrenador-formulario.js"></script>
+</body>
+</html>

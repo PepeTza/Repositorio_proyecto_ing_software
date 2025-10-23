@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Consultar_Jugador.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14bdab9544.js" crossorigin="anonymous"></script>
+    <title>Consultar Jugador</title>
+</head>
+<body>
+    <div class="sidebar-form">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <img src="/proyectoIS/public/logotemplateUAP10.png" alt="Union Atletico Paraiso" class="logo">
+                    <h3 class="title">Unión Atlético Paraíso</h3>
+                </div>
+                <nav class="navigation">
+                    <a href="/proyectoIS/src/app/pantalla-inicio/pantalla-inicio.component.html" class="nav-item"><i class="fa-solid fa-home"></i> <span>Inicio</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-plantilla/Tabla Jugador/Tabla_Jugador.html" class="nav-item"><i class="fa-solid fa-users"></i> <span>Plantilla</span></a>
+                    <a href="/proyectoIS/src/app/Empleados/menu/menu.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> <span>Empleados</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-implemento/Tabla-Consultar/implemento-tabla.html" class="nav-item"><i class="fa-regular fa-futbol"></i> <span>Implementos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-entrenamiento/Tabla Entrenamiento/Tabla_Entrenamiento.html" class="nav-item"><i class="fa-solid fa-person-running"></i> <span>Entrenamientos</span></a>
+                    <a href="/proyectoIS/src/app/pantalla-usuario/Tabla-Consultar-Editar/pantalla-usuario-tabla.component.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>Usuarios</span></a>
+                    <a href="/proyectoIS/src/app/login/login.component.html" class="nav-item"><i class="fa-solid fa-right-from-bracket"></i> <span>Salir</span></a>
+                </nav>
+            </div>
+        </div>
+
+        
+        <section id="cuadroFormulario">
+            <h1 id="titulo">Detalles del Jugador</h1>
+            <form id="formJugador">
+                <ul id="items">
+                    <li>
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <span id="nombre" class="mostrar"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="cedula">Cédula:</label>
+                            <span id="cedula"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="posicion">Posición:</label>
+                            <span id="posicion"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="edad">Edad:</label>
+                            <span id="edad"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="nacionalidad">Nacionalidad:</label>
+                            <span id="nacionalidad"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="dorsal">Dorsal:</label>
+                            <span id="dorsal"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="peso">Peso:</label>
+                            <span id="peso"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="altura">Altura:</label>
+                            <span id="altura"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="tarjetaRoja">Tarjetas Rojas:</label>
+                            <span id="tarjetaRoja"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="tarjetaAmarilla">Tarjetas Amarillas:</label>
+                            <span id="tarjetaAmarilla"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="titulos">Títulos:</label>
+                            <span id="titulos"></span>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <button id="boton" onclick="window.location.href='../Tabla Jugador/Tabla_Jugador.html'">Regresar</button>
+        </section>
+    </div>
+    <script src="Consultar_Jugador.js"></script>
+</body>
+</html>
